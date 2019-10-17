@@ -27,11 +27,14 @@ public class Student {
 	private String firstName;
 	private String middleName;
 	
+	@NotBlank(message = "Last Name Required")
 	@Column(name = "Last_Name", nullable = false)
 	private String lastName;
 	
+	@NotBlank(message = "GPA is Required")
 	private float cgpa;
 	
+	@NotBlank(message = "Date is Required")
 	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	@Column(name = "Enrollment_Date")
 	private LocalDate enrollmentDate;
@@ -102,6 +105,16 @@ public class Student {
 	public void setEnrollmentDate(LocalDate enrollmentDate) {
 		this.enrollmentDate = enrollmentDate;
 	}
+
+	public int getStudentId() {
+		return studentId;
+	}
+
+	public void setStudentId(int studentId) {
+		this.studentId = studentId;
+	}
+	
+	
 
 //	public String isInternational() {
 //		return isInternational;

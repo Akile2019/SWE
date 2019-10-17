@@ -10,10 +10,10 @@ public interface StudentService {
 	//Iterable<Student> getAllStudents();  //we use iterable inorder to use for each
 	
 	List<Student> getAllStudents();
-	Student findById(long studentId);
+	Student findById(int studentId);
 	Student addNewStudent(Student student);
 	void deleteStudent(Student student);
-	void deletStudentById(long studentId);	
+	void deletStudentById(int studentId);	
 	Student update(Student student);
 	
 	//Page<Student> getAllBooksPaged(int pageNo);

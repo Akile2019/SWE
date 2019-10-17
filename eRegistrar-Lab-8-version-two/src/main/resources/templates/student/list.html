@@ -64,7 +64,9 @@
                 </thead>
                 <tbody>
                 <tr th:each="student,iterStat : ${students}">
-                    <!--th:onclick="@{document.location='/elibrary/book/edit/{bookId}'(bookId=${book.bookId})}" -->
+                
+              
+                  <!--  <th:onclick="@{document.location='/e/book/edit/{bookId}'(bookId=${book.bookId})}" >-->
                     <th scope="row" th:text="${iterStat.count}"></th>
                     <td th:text="${student.firstName}"></td>
                     <td th:text="${student.middleName}"></td>
@@ -72,7 +74,7 @@
                     <td th:text="${student.studentNumber}"></td>
                     <td th:text="${student.cgpa}"></td>
                     <td th:text="${student.enrollmentDate}"></td>
-                    <td><a th:href="@{'/eRegistrar/student/edit/{studentId}'(studentId=${student.studentId})}">Edit</a></td>
+                    <td><a th:href="@{'/eRegistrar/student/new/{studentId}'(studentId=${student.studentId})}">Edit</a></td>
                     <td>
                          <a data-toggle="modal" data-target="#confirmDeleteBookModal" th:href="@{'/eRegistrar/student/delete/' + ${student.studentId}}">Delete</a>
  <!--                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">-->

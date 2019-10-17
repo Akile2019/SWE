@@ -26,7 +26,7 @@ public class StudentServiceImpl implements StudentService {
 	}
 
 	@Override
-	public Student findById(long studentId) {
+	public Student findById(int studentId) {
 		
 		return studentRepo.findById(studentId).orElse(null);
 	}
@@ -44,7 +44,7 @@ public class StudentServiceImpl implements StudentService {
 	}
 
 	@Override
-	public void deletStudentById(long studentId) {
+	public void deletStudentById(int studentId) {
 		// TODO Auto-generated method stub
 		studentRepo.deleteById(studentId);
 	}
@@ -54,6 +54,8 @@ public class StudentServiceImpl implements StudentService {
 		// TODO Auto-generated method stub
 		return studentRepo.save(student);
 	}
+
+	
 
 	
 }
